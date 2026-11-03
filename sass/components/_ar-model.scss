@@ -23,10 +23,9 @@ model-viewer {
 }
 
 .Hotspot:focus {
-  border: 5px solid #002A52;
-  height: 32px;
   outline: none;
-  width: 32px;
+  border: none;
+  transform: scale(1.1);
 }
 
 .HotspotAnnotation{
@@ -60,6 +59,7 @@ model-viewer {
     color: #333;
     line-height: 22px;
     font-weight: 300;
+    margin-bottom: 10px;
   }
   
   .HotspotAnnotation h2 {

@@ -16,12 +16,12 @@
     {
       title: 'Smart LED Indicator',
       text: 'Your music never stops. The intuitive LED indicator shows your Bluetooth pairing status and changes color when the battery is running low.',
-      image: 'images/usb-c-charging.svg'
+      image: 'images/led-indicator.svg'
     },
     {
       title: 'Water & Dust Protection',
       text: 'Made with a durable build, the rugged exterior is fully IP67-rated, making it waterproof and dustproof so you can take your music everywhere.',
-      image: 'images/anti-slip-pads.svg'
+      image: 'images/water-dust-proof.svg'
     },
   ]
 
