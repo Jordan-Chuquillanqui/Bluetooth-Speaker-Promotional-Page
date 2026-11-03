@@ -1,1 +1,74 @@
-/*# sourceMappingURL=main.css.map */
+model-viewer {
+  width: auto;
+  max-width: 1200px;
+  height: 700px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.Hotspot {
+  background: url(../images/hotspot.svg) center no-repeat;
+  border: 0;
+  cursor: pointer;
+  width: 50px;
+  height: 35px;
+  transition: all 1s ease-in-out;
+}
+
+.Hotspot:not([data-visible]) {
+  opacity: 0;
+  width: 45px;
+  height: 38px;
+  pointer-events: none;
+}
+
+.Hotspot:focus {
+  border: 5px solid #002A52;
+  height: 32px;
+  outline: none;
+  width: 32px;
+}
+
+.HotspotAnnotation {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: #002A52;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  left: calc(100% + 1em);
+  max-width: 350px;
+  overflow-wrap: break-word;
+  padding: 0.5em 1em;
+  position: absolute;
+  top: -300%;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: left;
+}
+
+.Hotspot:hover .HotspotAnnotation {
+  opacity: 1;
+  visibility: visible;
+}
+
+.HotspotAnnotation p {
+  color: #333;
+  line-height: 22px;
+  font-weight: 300;
+}
+
+.HotspotAnnotation h2 {
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+.HotspotAnnotation img {
+  width: 100px;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=main.css.map */
