@@ -1,6 +1,9 @@
 (() => {
 
   //variables
+  const button = document.querySelector("#button");
+  const burgerCon = document.querySelector("#burger-con");
+
   const hotspots = document.querySelectorAll(".Hotspot");
   const infoBoxes = [
     {
@@ -26,6 +29,10 @@
   ]
 
   //functions
+  function hamburgerMenu() {
+    burgerCon.classList.toggle("slide-toggle");
+    button.classList.toggle("expanded");
+  }
 
   function loadInfo() {
     infoBoxes.forEach((infoBox, index) => {
@@ -50,6 +57,9 @@
   }
 
   loadInfo();
+
+  //Event Listeners
+  button.addEventListener("click", hamburgerMenu);
 
 })();
 
