@@ -1,3 +1,7 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
 model-viewer {
   width: auto;
   max-width: 1200px;
@@ -93,5 +97,62 @@ model-viewer {
   .HotspotAnnotation img {
     width: 100px;
     margin-bottom: 20px;
+  }
+}
+#main-header {
+  background-color: #002A52;
+  color: #efefef;
+}
+#main-header #main-nav button {
+  background: url(../images/burger.svg) center no-repeat;
+  width: 20px;
+  height: 20px;
+  transition: all 0.5s ease;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border: 0px;
+  cursor: pointer;
+}
+#main-header #main-nav button.expanded {
+  transform: rotate(90deg);
+}
+#main-header #burger-con {
+  display: none;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+#main-header #burger-con.slide-toggle {
+  display: block;
+}
+#main-header #burger-con ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#main-header #burger-con li a {
+  display: block;
+  text-align: right;
+  padding: 10px 100px 10px 0;
+  color: #efefef;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  #main-header #main-nav {
+    display: none;
+  }
+  #main-header #burger-con {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  #main-header #burger-con ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #main-header #burger-con li a {
+    font-size: 24px;
   }
 }/*# sourceMappingURL=main.css.map */
