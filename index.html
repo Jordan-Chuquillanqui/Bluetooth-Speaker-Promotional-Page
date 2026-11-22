@@ -26,6 +26,17 @@
                 </div>
         </div>
     </header>
+
+    <main>
+    <section>
+            <h2 class="visually-hidden">Hero Section</h2>
+            <div>
+                <canvas id="explode-view"></canvas>
+            </div>
+            <div>
+                <img src="images/promotional image 3.png" alt="Promotional Image of the Speakers">
+            </div>
+    </section>
     <div class="grid-con center-grid-con">
         <section class="col-span-full">
             <model-viewer src="model/chuquillanqui_jordan_speaker.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
@@ -62,7 +73,11 @@
                 </div>
             </div>
         </section>
-    
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
     <script src="js/main.js"></script>
 </body>

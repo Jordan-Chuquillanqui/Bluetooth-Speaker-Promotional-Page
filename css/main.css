@@ -254,4 +254,8 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50%;
   border: none;
   cursor: pointer;
+}
+
+#explode-view {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

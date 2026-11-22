@@ -4,6 +4,20 @@
   const button = document.querySelector("#button");
   const burgerCon = document.querySelector("#burger-con");
 
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const canvas = document.querySelector("#explode-view");
+  const context = canvas.getContext("2d");
+
+  canvas.width = 1280;
+  canvas.height = 720;
+
+  const frameCount = 150;
+  const images = [];
+  const speaker = { frame: 0};
+
+
   const hotspots = document.querySelectorAll(".Hotspot");
   const infoBoxes = [
     {
@@ -37,6 +51,34 @@
     button.classList.toggle("expanded");
   }
 
+
+  function scrollAnimation() {
+    for (let i = 0; i < frameCount; i++) {
+      const image = new Image();
+      image.src = `images/speaker_animation/speaker_animation${(i).toString().padStart(4, '0')}.jpg`;
+      images.push(image);
+    }
+
+    gsap.to(speaker, {
+      frame: frameCount - 1,
+      snap: "frame",
+      scrollTrigger: {
+        trigger: "#explode-view",
+        pin: true,
+        scrub: 1
+      },
+      onUpdate: render
+    });
+  }
+
+  function render() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(images[speaker.frame], 0, 0, canvas.width, canvas.height);
+  }
+
+  scrollAnimation();
+
+  
   function loadInfo() {
     let mobileSelected = document.querySelector("#mobile-features")
     infoBoxes.forEach((infoBox, index) => {
@@ -75,6 +117,8 @@
 
   //Event Listeners
   button.addEventListener("click", hamburgerMenu);
+
+  images[0].addEventListener("load", render);
 
   slider.addEventListener("input", moveDivisor);
   window.addEventListener("load", resetSlider);
