@@ -28,6 +28,9 @@
     },
   ]
 
+  const divisor = document.querySelector("#divisor");
+  const slider = document.querySelector("#slider");
+
   //functions
   function hamburgerMenu() {
     burgerCon.classList.toggle("slide-toggle");
@@ -58,8 +61,19 @@
 
   loadInfo();
 
+  function moveDivisor() {
+    divisor.style.width = `${slider.value}%`;
+  };
+
+  function resetSlider() {
+    slider.value = 50;
+  };
+
   //Event Listeners
   button.addEventListener("click", hamburgerMenu);
+
+  slider.addEventListener("input", moveDivisor);
+  window.addEventListener("load", resetSlider);
 
 })();
 
