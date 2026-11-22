@@ -107,6 +107,19 @@
 
   loadInfo();
 
+
+  gsap.utils.toArray(".imagebox").forEach(function(imagebox) {
+    gsap.from(imagebox, {
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: imagebox,
+        start: "top 60%",
+        toggleActions: "play none none none"
+      }
+    });
+  });
+
   function moveDivisor() {
     divisor.style.width = `${slider.value}%`;
   };

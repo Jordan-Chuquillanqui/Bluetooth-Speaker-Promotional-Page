@@ -1,5 +1,8 @@
 # Bluetooth-Speaker-Promotional-Page
-This repo contains the Bluetooth Promotional Page with the 3D model and the hotspots
+This repo contains the Bluetooth Promotional Page with a 3D model with hotspots, an x-ray slider and an intro animation 
+
+<img src=images/promotional-image-2.jpg>
+
 ## Installation 
 No installation required. Simply download the zip file and extract
 ## Usage 
