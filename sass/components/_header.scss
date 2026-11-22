@@ -1,6 +1,9 @@
 #main-header {
     background-color: #002A52;
     color: #efefef;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
     #main-nav button {
         background: url(../images/burger.svg) center no-repeat;
