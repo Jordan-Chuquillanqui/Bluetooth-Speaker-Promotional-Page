@@ -38,24 +38,28 @@
   }
 
   function loadInfo() {
+    let mobileSelected = document.querySelector("#mobile-features")
     infoBoxes.forEach((infoBox, index) => {
      
       let selected = document.querySelector(`#hotspot-${index+1}`);
-
-      //need to create title
-      const titleElement = document.createElement("h2");
+     
+      const titleElement = document.createElement('h2');
       titleElement.textContent = infoBox.title;
-      //need to create text
-      const textElement = document.createElement("p");
+
+      const textElement = document.createElement('p');
       textElement.textContent = infoBox.text;
-      //need to create image
-      const imageElement = document.createElement('img');
-      imageElement.src= infoBox.image;
+
+      const imgElement = document.createElement('img');
+      imgElement.src = infoBox.image;
 
 
-      selected.appendChild(imageElement);
+      selected.appendChild(imgElement);
       selected.appendChild(titleElement);
       selected.appendChild(textElement);
+
+      mobileSelected.appendChild(imgElement.cloneNode(true));
+      mobileSelected.appendChild(titleElement.cloneNode(true));
+      mobileSelected.appendChild(textElement.cloneNode(true));
     });
   }
 
