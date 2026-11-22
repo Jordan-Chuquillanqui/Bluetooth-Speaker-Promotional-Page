@@ -122,6 +122,9 @@ model-viewer {
 #main-header {
   background-color: #002A52;
   color: #efefef;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 #main-header #main-nav button {
   background: url(../images/burger.svg) center no-repeat;
@@ -188,6 +191,7 @@ model-viewer {
   background-image: url(../images/speaker.png);
   background-size: cover;
   border-radius: 15px;
+  margin-top: 25px;
 }
 
 #divisor {
