@@ -26,7 +26,7 @@
                 </div>
         </div>
     </header>
-    <div>
+    
         <section>
             <model-viewer src="model/chuquillanqui_jordan_speaker.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
                 <button class="Hotspot" slot="hotspot-1" data-position="-0.2375314372071684m -0.06917003387276943m -0.6612800031944361m" data-normal="0.020323652694362457m 0.005082966763557381m -0.999780532211965m" data-visibility-attribute="visible">
@@ -73,7 +73,16 @@
                 <p>Made with a durable build, the rugged exterior is fully IP67-rated, making it waterproof and dustproof so you can take your music everywhere.</p>
             </div>
         </section>
-    </div>
+        <section class="grid-con center-grid-con">
+            <h2 class="col-span-full">Take a look at what's inside</h2>
+            <div class="col-span-full sliderContainer">
+                <div id="xray">
+                    <div id="divisor"></div>
+                    <input type="range" min="0" max="100" value="50" id="slider">
+                </div>
+            </div>
+        </section>
+    
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
     <script src="js/main.js"></script>
 </body>
